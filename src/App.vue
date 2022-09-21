@@ -21,4 +21,9 @@
   #app {
     height: 100vh;
   }
+  button.transparent {
+    margin: 5px;
+    background: transparent;
+    border: none;
+  }
 </style>

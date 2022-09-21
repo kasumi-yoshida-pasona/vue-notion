@@ -1,15 +1,25 @@
 <template>
   <div class="directive-page">
     <h2>学習2:ディレクティブ</h2>
+
+    <h3><span class="badge dage-secondary">Vue.js</span></h3>
+    <input type="checkbox" v-model="checked">
+    <span v-show="checked">チェック時だけ見えるよ</span>
   </div>
 </template>
 
 <script>
-  export default {}
+  export default {
+    data() {
+      return {
+        checked: true
+      }
+    }
+  }
 </script>
 
 <style scoped>
-  .direcitve-page {
+  .directive-page {
     padding: 20px;
   }
 </style>

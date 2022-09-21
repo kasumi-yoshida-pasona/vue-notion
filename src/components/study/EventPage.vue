@@ -1,15 +1,30 @@
 <template>
   <div class="event-page">
     <h2>学習3:イベント</h2>
+
+    <h3><span class="badge badge-secondary">JavaScript</span></h3>
+    <span>クリックされた回数は{{count}}回です </span>
+    <button id="button" class="btn btn-sm btn-info" @click="onClickButton()">Click Me</button>
   </div>
 </template>
 
 <script>
-  export default {}
+  export default {
+    data() {
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      onClickButton: function () {
+        this.count++;
+      }
+    }
+  }
 </script>
 
 <style scoped>
-  .direcitve-page {
+  .event-page {
     padding: 20px;
   }
 </style>
