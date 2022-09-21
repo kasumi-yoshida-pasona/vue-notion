@@ -1,6 +1,11 @@
 <template>
   <div class="main-page">
-    メインページ
+    <div class="left-menu">
+      左メニュー
+    </div>
+    <div class="right-view">
+      右レビュー
+    </div>
   </div>
 </template>
 
@@ -8,8 +13,17 @@
   export default {}
 </script>
 
-<style scope>
+<style scoped lang="scss">
   .main-page {
-    padding: 10px;
+    display: flex;
+    height: calc(100vh - 60px);
+    .left-menu {
+      width: 350px;
+      background-color: #f7f6f3;
+    }
+    .right-view {
+      flex-grow: 1;
+      padding: 10px;
+    }
   }
 </style>
