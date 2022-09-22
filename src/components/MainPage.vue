@@ -6,6 +6,7 @@
         v-for="note in noteList"
         :note="note"
         :key="note.id"
+        @delete="onDeleteNote"
       />
 
       <!-- ノート追加ボタン -->
@@ -33,7 +34,12 @@
         this.noteList.push({
           id: new Date().getTime().toString(16),
           name: `新規ノート`,
+          mouseover: false,
         })
+      },
+      onDeleteNote: function(deleteNote) {
+        const index = this.noteList.indexOf(deleteNote);
+        this.noteList.splice(index, 1);
       },
     },
     components: {
